@@ -46,6 +46,11 @@
 1. const成员变量，只能通过**构造函数的初始化列表进行初始化**，不能再类声明中进行初始化
 2. const成员函数，const对象不用调用**非const成员函数**，非const对象可以；不能改变非mutable的值
 
+## final 和 override 
++ final：该虚函数不能被子类重写
++ override：编译器帮忙检查是否是父类虚函数重写
+
+
 
 
 
