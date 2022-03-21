@@ -46,17 +46,45 @@
 1. const成员变量，只能通过**构造函数的初始化列表进行初始化**，不能再类声明中进行初始化
 2. const成员函数，const对象不用调用**非const成员函数**，非const对象可以；不能改变非mutable的值
 
-## final 和 override 
+## final 和 override overload hide
 + final：该虚函数不能被子类重写
 + override：编译器帮忙检查是否是父类虚函数重写
++ override 和 hide 的区别在于重写的函数是否为虚函数
 
+## 悬空指针 和 野指针
 
+## C++中有哪几种构造函数 **六种**
++ 默认构造函数
++ 初始化构造函数
++ 拷贝构造函数
+1. 什么时候使用拷贝构造函数 **三种情况** 形参为对象 用实例化对象去初始另一个对象 函数返回值
++ 移动构造函数
++ 委托构造函数
++ 转换构造函数
 
+## 浅拷贝 和 深拷贝    *是否开辟了新空间*
 
+##  private、protected、public的访问权限和继承关系
 
+## 什么是大小端存储？ 小端：低字节在低位  大端：高字节在低位
 
+## volatile mutable explicit 
++ volatile 每次从内存中读
++ mutable const函数可以改变mutable修饰的值
++ explicit 只修饰类的构造函数，修饰之后不可隐式转换
 
+## C++异常处理
++ try、catch、throw关键字
++ 函数异常声明列表
++ 异常类型 bad_alloc  out of range  bad_typeid  ios_base::failure  bad_cast
 
+## 类型转换
+**const_cast  dynamic_cast static_cast**
 
+## new 和 delete 的实现原理
++ 三步  简单类型和复杂类型
+1.简单类型，直接返回开辟空间指针p，直接释放开辟的空间指针p
+2.复杂类型，直接返回开辟空间指针p-4，**delete[]**直接释放开辟空间p-4, **delete**直接释放空间p，这样会报错
 
+## 
 
